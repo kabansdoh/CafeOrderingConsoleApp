@@ -16,7 +16,6 @@ namespace CafeOrderingConsoleApp
         public static int beacon = 3;
         public static int oil = 1;
         public static int tomato = 1;
-
     }
 }
 

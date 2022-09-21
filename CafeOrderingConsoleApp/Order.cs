@@ -9,7 +9,6 @@ namespace CafeOrderingConsoleApp
     class Order : Dish
 
     {
-
         static void Main(string[] args)
         {
            
@@ -33,38 +32,45 @@ namespace CafeOrderingConsoleApp
                               "\tPrice - " + breakfastPrice + "\n");
             Console.WriteLine("------------------------------------------------------------\n");
 
-            string[] jack = new string[4];
+            //A collection of orders that will help assign them to cooks
+            List<string> cookJack = new List<string>();       
 
-
-
-            if (jack.Length < 5)
-            { 
-                switch (Console.ReadLine())
-                {
-                    case "bolognese":
-                        BolTime();
-                        break;
-                    case "soup":
-                        SoupTime();
-                        break;
-                    case "steak":
-                        SteakTime();
-                        break;
-                    case "breakfast":
-                        BrTime();
-                        break;
-                    case "end":
-
-                        break;
-                    default:
-                        Console.WriteLine("Please choose a dish from the list.");
-                        break;
-                }
-            }
-            else
+            do
             {
-                Console.WriteLine("Al cooks are busy");
+                if (cookJack.Count < 5)
+                {
+                    switch (Console.ReadLine())
+                    {
+                        case "bolognese":
+                            CookTime();
+                            cookJack.Add("bolognese");
+                            break;
+                        case "soup":
+                            CookTime();
+                            cookJack.Add("soup");
+                            break;
+                        case "steak":
+                            CookTime();
+                            cookJack.Add("steak");
+                            break;
+                        case "breakfast":
+                            CookTime();
+                            cookJack.Add("breakfast");
+                            break;
+                        default:
+                            Console.WriteLine("Please choose a dish from the list.");
+                            break;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("No cooks available\n");
+                    Console.ReadKey();
+                    break;
+                }
+               
             }
+            while (cookJack.Count < 6);
 
             Console.ReadKey();
         }
