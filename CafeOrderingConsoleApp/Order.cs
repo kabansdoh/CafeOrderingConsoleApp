@@ -17,19 +17,19 @@ namespace CafeOrderingConsoleApp
 
             Console.WriteLine("\tBolognese - Spagetti with fried meat and tomato sauce\n " +
                               "\tIngredients: Meat, Spagetti, Tomatos\n" +
-                              "\tPrice - " + bolognesePrice + "\n");
+                              "\tPrice - " + bolognesePrice + "$\n");
 
             Console.WriteLine("\tSoup - Fresh soup with vegetables\n" +
                               "\tIngredients: Bouillon, Vegetables\n" +
-                              "\tPrice - " + soupPrice + "\n");
+                              "\tPrice - " + soupPrice + "$\n");
 
             Console.WriteLine("\tSteak - A juicy beef steak\n" +
                               "\tIngredients: Meat, Oil\n" +
-                              "\tPrice - " + steakPrice + "\n");
+                              "\tPrice - " + steakPrice + "$\n");
 
             Console.WriteLine("\tBreakfast - Fried eggs with bacon\n" +
                               "\tIngredients: Eggs, Bacon\n" +
-                              "\tPrice - " + breakfastPrice + "\n");
+                              "\tPrice - " + breakfastPrice + "$\n");
             Console.WriteLine("------------------------------------------------------------\n");
 
             //A collection of orders that will help assign them to cooks

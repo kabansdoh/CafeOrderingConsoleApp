@@ -45,7 +45,6 @@
   <ItemGroup>
     <Compile Include="Ingredient.cs" />
     <Compile Include="Dish.cs" />
-    <Compile Include="Cooks.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
